@@ -98,7 +98,7 @@
 
   /* Allow thumbnails and embedded areas to flow naturally */
   .work-thumbnail { height: auto !important; min-height: 120px; }
-  .pdf-embed-container, .resume-preview iframe { width: 100% !important; height: auto !important; min-height: 300px; }
+  .pdf-embed-container { width: 100% !important; height: auto !important; min-height: 300px; }
   .glass-card, .profile-frame { width: 100% !important; max-width: 420px; aspect-ratio: auto; height: auto !important; }
 }
 
@@ -107,10 +107,26 @@
 
 @media (max-width: 900px) {
   .navbar { display:flex; flex-direction:row; align-items:center; gap:8px; position:relative; top: 8px; padding-top:12px; padding-right: 60px; }
-  .nav-avatar { display:block; width:80px; height:80px; border-radius:50%; overflow:hidden; flex-shrink:0; }
+  .nav-avatar { display:block; width:80px; height:80px; border-radius:12px; overflow:hidden; flex-shrink:0; }
   .nav-avatar-image { width:100%; height:100%; }
   .nav-toggle { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); }
-  .theme-toggle { display: none; }
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    position: absolute;
+    right: 56px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+  }
   .nav-avatar .profile-frame { display:none; }
   /* prevent fixed navbar from hiding anchored sections */
   html { scroll-padding-top: 120px; }
