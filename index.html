@@ -104,7 +104,6 @@
       </div>
 
     </div>
-    <br>
 
     <div class="hero-image">
 
@@ -393,7 +392,7 @@
 <section id="resume" class="resume">
 
     <h2 class="section-title">
-        Resume / CV
+        Resume
     </h2>
 
     <p class="section-subtitle">
@@ -407,9 +406,11 @@
             <h3>Professional Summary</h3>
 
             <p>
-                Instructional Designer with experience in creating engaging
-                e-learning, ILT, and VILT solutions using instructional design
-                methodologies, visual communication, and modern authoring tools.
+                Results-driven Instructional Designer with 4+ years of experience designing
+                learner-centered digital and blended learning solutions for corporate and
+                educational clients. Expert in needs analysis, ADDIE-based curriculum design,
+                rapid-authoring with Articulate Storyline and other modern tools, and
+                leveraging data and AI to boost engagement and measurable learning outcomes.
             </p>
 
             <ul>
@@ -440,15 +441,9 @@
 
         </div>
 
-        <div class="resume-preview">
+        <!-- Removed resume preview iframe — summary now fills the resume section -->
 
-            <div class="pdf-embed-container">
-                <iframe id="resume-iframe" data-src="assets/resume/Dineshraj_V4.final1.pdf" src="" width="100%" height="700" title="Resume PDF preview" style="border: none;">
-                    The preview is not loaded. Click "View Resume" to load the preview.
-                </iframe>
-            </div>
 
-        </div>
 
     </div>
 </section>
@@ -723,17 +718,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    document.querySelectorAll('.resume-view').forEach(function (el) {
-        el.addEventListener('click', function (e) {
-            var url = el.getAttribute('href');
-            var iframe = document.getElementById('resume-iframe');
-            if (iframe && !iframe.src) {
-                iframe.src = iframe.dataset.src || url;
-                iframe.scrollIntoView({ behavior: 'smooth' });
-            }
-            // keep default behavior (opening in a new tab) intact
-        });
-    });
+    // Resume preview removed — clicking "View Resume" will open the PDF in a new tab as before.
 });
 </script>
 
